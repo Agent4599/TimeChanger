@@ -4,12 +4,12 @@ import pyautogui
 import urllib.request
 
 
-local_version = "2.0"
+local_version = "1.0"
 
 def check_for_updates():
     try:
         # Replace this with the shareable link of your version.txt file on Google Drive
-        server_version_url = "https://github.com/Agent4599/TimeChanger.git"
+        server_version_url = "https://raw.githubusercontent.com/Agent4599/TimeChanger/main/Time_Changer.py"
         with urllib.request.urlopen(server_version_url) as response:
             server_version = response.read().decode('utf-8').strip()
             if local_version < server_version:
@@ -22,7 +22,7 @@ def check_for_updates():
 def download_update():
     try:
         # Replace this with the shareable link of your updated script on Google Drive
-        script_url = "https://github.com/Agent4599/TimeChanger.git"
+        script_url = "https://raw.githubusercontent.com/Agent4599/TimeChanger/main/Time_Changer.py"
         with urllib.request.urlopen(script_url) as response:
             updated_script = response.read().decode('utf-8')
             with open(__file__, 'w') as script_file:
