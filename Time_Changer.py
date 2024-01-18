@@ -4,7 +4,7 @@ import pyautogui
 import urllib.request
 
 
-local_version = "1.0"
+local_version = "1.1"
 
 def check_for_updates():
     try:
@@ -258,7 +258,7 @@ def start_cmd(max_executions, text_to_type):
 def main():
     while True:
         print("A")
-        print("Welcome To Time Changer v1.0 By CRYP71C 5H4D0W " + "\nType 1 For Hours to Minutes" + "\nType 2 For Hours to Sec" + "\nType 3 For Minutes to Hours" + "\nType 4 For Minutes to Seconds" + "\nType 5 For Seconds to Hours" + "\nType 6 For Seconds to Minutes" + "\nType 7 To Exit")
+        print("Welcome To Time Changer v1.0 By " + "\nType 1 For Hours to Minutes" + "\nType 2 For Hours to Sec" + "\nType 3 For Minutes to Hours" + "\nType 4 For Minutes to Seconds" + "\nType 5 For Seconds to Hours" + "\nType 6 For Seconds to Minutes" + "\nType 7 To Exit")
         getinput = input()
 
         if getinput == '1':
