@@ -1,9 +1,10 @@
+#DO NOT EDIT ANY CODE IS YOU DON"T KNOW WHAT YOUR DOING!!!
+
 import os
 import time
 import pyautogui
 import urllib.request
 
-print("ok")
 local_version = "1.0"
 
 
@@ -81,7 +82,7 @@ def Hour_to_Sec():
         os.system('cls')
         print("Hour to Seconds Converter")
         Minutes = int(input("Enter the number of Hour ->"))
-        Seconds = int(input("Enter the number of Minutes (Enter zero if none) ->"))
+        Seconds = int(input("Enter the number of Seconds (Enter zero if none) ->"))
 
         # Converts min into sec and adds the seconds provided by the user.
         Final_Second = Minutes * 3600 + Seconds
@@ -245,46 +246,60 @@ def Sec_to_Min():
             else:
                 print("Error: Invalid input. Please enter 'yes' or 'no'.")
 
-def start_cmd(max_executions, text_to_type):
-    execution_count = 0
+#--IGNORE THIS--
 
-    while execution_count < max_executions:
-        os.system("start cmd")
-        print("CMD started")
-        execution_count += 1
+# def start_cmd(max_executions, text_to_type):
+#     execution_count = 0
+
+#     while execution_count < max_executions:
+#         os.system("start cmd")
+#         print("CMD started")
+#         execution_count += 1
         
 
-        # Allow some time for the new CMD window to open
-        time.sleep(1)
+#         # Allow some time for the new CMD window to open
+#         time.sleep(1)
 
-        # Type the specified text
-        pyautogui.typewrite(text_to_type)
-        pyautogui.press('enter')
+#         # Type the specified text
+#         pyautogui.typewrite(text_to_type)
+#         pyautogui.press('enter')
+
+#--IGNORE THIS--
 
 
 def main():
-    while True:
-        print("A")
-        print("Welcome To Time Changer v1.0 By " + "\nType 1 For Hours to Minutes" + "\nType 2 For Hours to Sec" + "\nType 3 For Minutes to Hours" + "\nType 4 For Minutes to Seconds" + "\nType 5 For Seconds to Hours" + "\nType 6 For Seconds to Minutes" + "\nType 7 To Exit")
-        getinput = input()
+        time.sleep(1)
+        print("Connecting to the main servers...")
+        time.sleep(2)
+        print("Successful Connected.")
+        time.sleep(1)
+        print("Authorizing...")
+        time.sleep(2)
+        print("Authorizition Completed.")
+        time.sleep(1)
+        print("Changing Time...")
+        time.sleep(2)
+        
+        while True:
+            os.system('cls')
+            print("Welcome To Time Changer v1.0 By Aditya Rana " + "\nType 1 For Hours to Minutes" + "\nType 2 For Hours to Sec" + "\nType 3 For Minutes to Hours" + "\nType 4 For Minutes to Seconds" + "\nType 5 For Seconds to Hours" + "\nType 6 For Seconds to Minutes" + "\nType Exit To Exit")
+            getinput = input()
 
-        if getinput == '1':
-            Hour_to_Min()
-        elif getinput == '2':
-            Hour_to_Sec()
-        elif getinput == '3':
-            Min_to_Hour()
-        elif getinput == '4':
-            Min_to_Sec()
-        elif getinput == '5':
-            Sec_to_Hour()
-        elif getinput == '6':
-            Sec_to_Min()
-        elif getinput == '7':
-            exit()
-        elif getinput.lower() == 'hack':
-            start_cmd(1, str("A"))
-        else:
-            print("Error: Invalid input.")
+            if getinput == '1':
+                Hour_to_Min()
+            elif getinput == '2':
+                Hour_to_Sec()
+            elif getinput == '3':
+                Min_to_Hour()
+            elif getinput == '4':
+                Min_to_Sec()
+            elif getinput == '5':
+                Sec_to_Hour()
+            elif getinput == '6':
+                Sec_to_Min()
+            elif getinput.lower() == 'exit':
+                exit()
+            else:
+                print("Error: Invalid input.")
 
 main()
