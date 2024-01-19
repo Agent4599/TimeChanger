@@ -6,10 +6,11 @@ import urllib.request
 print("ok")
 local_version = "1.0"
 
+
 def check_for_updates():
     try:
-        # Replace this with the shareable link of your version.txt file on Google Drive
-        server_version_url = "https://raw.githubusercontent.com/Agent4599/TimeChanger/main/Time_Changer.py"
+        # Replace this with the raw link of your version.txt file on GitHub
+        server_version_url = "https://raw.githubusercontent.com/Agent4599/TimeChanger/main/version.txt"
         with urllib.request.urlopen(server_version_url) as response:
             server_version = response.read().decode('utf-8').strip()
             if local_version < server_version:
@@ -18,18 +19,24 @@ def check_for_updates():
         print(f"Error checking for updates: {e}")
     return False
 
-
 def download_update():
     try:
-        # Replace this with the shareable link of your updated script on Google Drive
+        # Replace this with the raw link of your updated script on GitHub
         script_url = "https://raw.githubusercontent.com/Agent4599/TimeChanger/main/Time_Changer.py"
         with urllib.request.urlopen(script_url) as response:
             updated_script = response.read().decode('utf-8')
-            with open(__file__, 'w') as script_file:
+            with open("Time_Changer.py", 'w') as script_file:
                 script_file.write(updated_script)
         print("Update successful. Please restart the script.")
     except Exception as e:
         print(f"Error downloading update: {e}")
+
+# Check for updates and download if available
+if check_for_updates():
+    print("An update is available. Downloading...")
+    download_update()
+else:
+    print("Your script is up to date.")
 
 # Check for updates and download if available
 if check_for_updates():
