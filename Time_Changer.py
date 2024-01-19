@@ -4,7 +4,7 @@ import pyautogui
 import urllib.request
 
 print("ok")
-local_version = "1.0"
+local_version = "2.0"
 
 def check_for_updates():
     try:
