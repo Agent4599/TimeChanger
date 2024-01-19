@@ -2,9 +2,10 @@ import os
 import time
 import pyautogui
 import urllib.request
+import pygame
 
 
-local_version = "1.1"
+local_version = "1.0"
 
 def check_for_updates():
     try:
