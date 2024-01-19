@@ -10,7 +10,7 @@ local_version = "1.0"
 def check_for_updates():
     try:
         # Replace this with the raw link of your version.txt file on GitHub
-        server_version_url = "https://raw.githubusercontent.com/Agent4599/TimeChanger/main/version.txt"
+        server_version_url = "https://raw.githubusercontent.com/Agent4599/TimeChanger/main/Server%20Version.txt"
         with urllib.request.urlopen(server_version_url) as response:
             server_version = response.read().decode('utf-8').strip()
             if local_version < server_version:
