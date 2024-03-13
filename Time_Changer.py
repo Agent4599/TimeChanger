@@ -5,7 +5,7 @@ import time
 import pyautogui
 import urllib.request
 
-local_version = "1.0"
+local_version = "1.1"
 
 
 def check_for_updates():
