@@ -282,7 +282,7 @@ def main():
         
         while True:
             os.system('cls')
-            print("Welcome To Time Changer v1.0 By Aditya Rana " + "\nType 1 For Hours to Minutes" + "\nType 2 For Hours to Sec" + "\nType 3 For Minutes to Hours" + "\nType 4 For Minutes to Seconds" + "\nType 5 For Seconds to Hours" + "\nType 6 For Seconds to Minutes" + "\nType Exit To Exit")
+            print("Welcome To Time Changer v2.0 By Aditya Rana " + "\nType 1 For Hours to Minutes" + "\nType 2 For Hours to Sec" + "\nType 3 For Minutes to Hours" + "\nType 4 For Minutes to Seconds" + "\nType 5 For Seconds to Hours" + "\nType 6 For Seconds to Minutes" + "\nType Exit To Exit")
             getinput = input()
 
             if getinput == '1':
